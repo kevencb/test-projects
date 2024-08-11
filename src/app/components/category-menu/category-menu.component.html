@@ -1,0 +1,26 @@
+<!-- <nav>
+    <ul>
+        <li>
+            <a href="" (click)="toggleMenu($event)">Categorias</a>
+            <ul [hidden]="!isMenuOpen">
+                @for (category of categories; track $index) {
+                    <a [routerLink]="['/category', category.path]">{{ category.name }}</a>
+                }
+            </ul>
+        </li>
+    </ul>
+</nav> -->
+
+
+<div class="container mx-auto">
+    <h1 class="text-center">Categorias</h1>
+    <div class="p-4 bg-slate-100 grid grid-cols-4">
+        @for (category of categories; track $index) {
+            <div>
+                <a [routerLink]="['/category', category.path]">
+                    <h2>{{ category.name }}</h2>
+                </a>
+            </div>
+        }
+    </div>
+</div>

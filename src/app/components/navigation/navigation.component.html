@@ -1,0 +1,15 @@
+<div class="w-full h-14 bg-slate-800">
+   <nav class="flex w-[90%] h-full mx-auto items-center justify-center">
+      <ul class="flex justify-center w-full h-full text-white gap-6 items-center">
+         @for(item of items; track item.id){
+         <li>
+            <a [routerLink]="item.link">{{ item.text}}</a>
+         </li>
+         }
+      </ul>
+   </nav>
+</div>
+
+<div class="container mx-auto my-10">
+   <h1>{{ title }}</h1>
+</div>
